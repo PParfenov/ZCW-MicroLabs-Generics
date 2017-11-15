@@ -1,5 +1,7 @@
 package StackArray;
 
+
+import StackArrayList.Stack;
 import java.util.Arrays;
 
 /**
@@ -9,7 +11,21 @@ import java.util.Arrays;
  */
 public class GenericStack<E> {
     private E[] elements;
+    private Stack<E> stack;
 
     public GenericStack() {
+        stack = new Stack<E>();
+    }
+
+    public void push(E e){
+        stack.push(e);
+    }
+
+    public E pop(){
+        return stack.pop();
+    }
+
+    public Boolean isEmpty(){
+        return stack.isEmpty();
     }
 }
